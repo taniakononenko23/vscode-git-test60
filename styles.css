@@ -15,16 +15,18 @@ td{
 }
 tr:nth-child(even) td:nth-child(odd){
     background-color: black;
-    border: 1px solid black ;
 } 
 tr:nth-child(odd) td:nth-child(even) {
-    background-color:black;
-    border: 1px solid black ;
-    
+    background-color:black;    
 }
 tr:first-child td:nth-child(n), 
 tr:last-child td:nth-child(n),
 tr:nth-child(n) td:first-child, 
 tr:nth-child(n) td:last-child {
   background-color: white;
+}
+table,
+tr:not(:first-child, :last-child) td:not(:first-child, :last-child) {
+  border: 1px solid black;
+  border-collapse: collapse;
 }
